@@ -9,7 +9,7 @@ Console.ReadKey();
 
 for (int i = 0; i < 100000; i++)
 {
-    await connection.QueryAsync($"SELECT {i}");
+    await connection.QueryAsync(new CommandDefinition($"SELECT {i}", flags: CommandFlags.NoCache));
     await connection.QueryAsync($"SELECT {i}");
 }
 
