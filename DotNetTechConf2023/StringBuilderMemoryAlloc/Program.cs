@@ -3,19 +3,20 @@
 
 Console.ReadKey();
 
-StringBuilder sb = new StringBuilder(54000000);
+StringBuilder sb = new StringBuilder(40000);
 
 Console.ReadKey();
 
-for (int i = 0; i < 500_000; i++)
+for (int i = 0; i < 500_000/360; i++)
 {
-    sb.Append(Guid.NewGuid());
-    sb.Append(Guid.NewGuid());
-    sb.Append(Guid.NewGuid());
+    for (int j = 0; j < 360; j++)
+    {
+        sb.Append(Guid.NewGuid());
+        sb.Append(Guid.NewGuid());
+        sb.Append(Guid.NewGuid());
+    }
+
+    sb.Clear();
 }
-
-Console.ReadKey();
-
-sb.Clear();
 
 Console.ReadKey();
