@@ -1,7 +1,11 @@
 ﻿using System.Text;
 
 
-StringBuilder sb = new StringBuilder();
+Console.ReadKey();
+
+StringBuilder sb = new StringBuilder(54000000);
+
+Console.ReadKey();
 
 for (int i = 0; i < 500_000; i++)
 {
@@ -10,4 +14,8 @@ for (int i = 0; i < 500_000; i++)
     sb.Append(Guid.NewGuid());
 }
 
+Console.ReadKey();
+
 sb.Clear();
+
+Console.ReadKey();
