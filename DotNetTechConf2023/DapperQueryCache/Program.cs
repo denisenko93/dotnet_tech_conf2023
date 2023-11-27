@@ -1,16 +1,14 @@
-﻿using Apps72.Dev.Data.DbMocker;
-using Dapper;
-
-var connection = new MockDbConnection();
-
-connection.Mocks.When(x => true).ReturnsTable(MockTable.Empty());
+﻿using Dapper;
+using MySqlConnector;
 
 Console.ReadKey();
 
+MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;database=test;uid=root;password=root;");
+
 for (int i = 0; i < 100000; i++)
 {
-    await connection.QueryAsync(new CommandDefinition($"SELECT {i}", flags: CommandFlags.NoCache));
-    await connection.QueryAsync($"SELECT {i}");
+    await connection.QueryFirstAsync(new CommandDefinition($"SELECT {i}", flags: CommandFlags.NoCache));
+    await connection.QueryFirstAsync(new CommandDefinition($"SELECT {i}", flags: CommandFlags.NoCache));
 }
 
 Console.ReadKey();
