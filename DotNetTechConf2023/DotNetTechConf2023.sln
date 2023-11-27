@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperQueryCache", "DapperQueryCache\DapperQueryCache.csproj", "{73946DBD-9A7B-47AE-BADB-D20275B95714}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql.Data.ThreadStarvation", "MySql.Data.ThreadStarvation\MySql.Data.ThreadStarvation.csproj", "{FF5CD173-4C16-4CB0-A05F-23F1A4C8E498}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +25,9 @@ Global
 		{73946DBD-9A7B-47AE-BADB-D20275B95714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73946DBD-9A7B-47AE-BADB-D20275B95714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73946DBD-9A7B-47AE-BADB-D20275B95714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5CD173-4C16-4CB0-A05F-23F1A4C8E498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5CD173-4C16-4CB0-A05F-23F1A4C8E498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5CD173-4C16-4CB0-A05F-23F1A4C8E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5CD173-4C16-4CB0-A05F-23F1A4C8E498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

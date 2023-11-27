@@ -3,7 +3,7 @@ using MySqlConnector;
 
 Console.ReadKey();
 
-MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;database=test;uid=root;password=root;");
+using MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;database=test;uid=root;password=root;");
 
 for (int i = 0; i < 100000; i++)
 {
