@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql.Data.ThreadStarvation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForwardedHeaders", "ForwardedHeaders\ForwardedHeaders.csproj", "{60178874-58C8-4503-A9BE-7F2A823D1F65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypedHttpClient", "TypedHttpClient\TypedHttpClient.csproj", "{2721F4A9-D691-4249-A737-69D74EDBC8C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +37,9 @@ Global
 		{60178874-58C8-4503-A9BE-7F2A823D1F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60178874-58C8-4503-A9BE-7F2A823D1F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60178874-58C8-4503-A9BE-7F2A823D1F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2721F4A9-D691-4249-A737-69D74EDBC8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2721F4A9-D691-4249-A737-69D74EDBC8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2721F4A9-D691-4249-A737-69D74EDBC8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2721F4A9-D691-4249-A737-69D74EDBC8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
