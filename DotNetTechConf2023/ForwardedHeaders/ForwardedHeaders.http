@@ -1,0 +1,7 @@
+@ForwardedHeaders_HostAddress = http://localhost:5000
+
+GET {{ForwardedHeaders_HostAddress}}/
+Accept: application/json
+X-Forwarded-For: 8.8.8.8
+
+###

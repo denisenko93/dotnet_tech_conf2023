@@ -1,9 +1,11 @@
 ﻿using System.Diagnostics;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
 
 Console.WriteLine("Press any key to start application");
 Console.ReadKey();
 Console.WriteLine("Application started");
+
+ThreadPool.SetMinThreads(250, 250);
 
 var sw = Stopwatch.StartNew();
 
@@ -26,7 +28,7 @@ async Task<object?> DoWorkAsync()
 
     command.CommandText = "DO SLEEP(1); SELECT 1;";
 
-    var result = await command.ExecuteScalarAsync();
+    var result = await command.ExecuteScalarAsync(CancellationToken.None);
 
     return result;
 }
