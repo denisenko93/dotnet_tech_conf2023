@@ -3,8 +3,11 @@ using Microsoft.Extensions.Hosting;
 
 var hostBuilder = Host.CreateApplicationBuilder(args);
 
-hostBuilder.Services.AddHttpClient<ITypedClient,TypedClient1>(x => x.BaseAddress = new Uri("http://example.com"));
-hostBuilder.Services.AddHttpClient<ITypedClient,TypedClient2>(x => x.BaseAddress = new Uri("https://github.com"));
+hostBuilder.Services.AddHttpClient<TypedClient1>(x => x.BaseAddress = new Uri("http://example.com"));
+hostBuilder.Services.AddHttpClient<TypedClient2>(x => x.BaseAddress = new Uri("https://github.com"));
+
+hostBuilder.Services.AddTransient<ITypedClient>(x => x.GetService<TypedClient1>());
+hostBuilder.Services.AddTransient<ITypedClient>(x => x.GetService<TypedClient2>());
 
 var host = hostBuilder.Build();
 
