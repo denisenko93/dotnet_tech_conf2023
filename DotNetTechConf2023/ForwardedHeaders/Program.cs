@@ -3,7 +3,12 @@ using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration["ForwardedHeaders_Enabled"] = "true";
+//builder.Configuration["ForwardedHeaders_Enabled"] = "true";
+
+builder.Services.Configure<ForwardedHeadersOptions>(x =>
+{
+    x.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
 
 var app = builder.Build();
 
@@ -14,7 +19,6 @@ app.MapGet("/", (HttpContext context) =>
     return new
     {
         Ip = context.Features.Get<IHttpConnectionFeature>().RemoteIpAddress.ToString(),
-        Ip2 = context.Connection.RemoteIpAddress.ToString(),
         OriginalIp = context.Request.Headers[ForwardedHeadersDefaults.XOriginalForHeaderName],
         ForwardedIp = context.Request.Headers[ForwardedHeadersDefaults.XForwardedForHeaderName],
     };

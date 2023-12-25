@@ -5,11 +5,11 @@ Console.WriteLine("Press any key to start application");
 Console.ReadKey();
 Console.WriteLine("Application started");
 
-ThreadPool.SetMinThreads(250, 250);
+//ThreadPool.SetMinThreads(250, 250);
 
 var sw = Stopwatch.StartNew();
 
-await Parallel.ForAsync(1, 1000, new ParallelOptions{MaxDegreeOfParallelism = 100}, async (_, _) =>
+await Parallel.ForAsync(1, 1000, new ParallelOptions{MaxDegreeOfParallelism = 150}, async (_, _) =>
 {
     await DoWorkAsync();
 });

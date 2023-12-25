@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MySql.Data" Version="8.0.33" />
+   <!--   <PackageReference Include="MySql.Data" Version="8.0.12" /> -->
+   <PackageReference Include="MySql.Data" Version="8.2.0" />
     </ItemGroup>
 </Project>
